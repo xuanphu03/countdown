@@ -41,7 +41,7 @@ export default function Happynewyear() {
     const rhombus2 = document.querySelector('.rhombus:nth-child(2)');
     const rhombusImg = document.querySelector('.rhombus-img');
     const mailActive = document.querySelector('.mail');
-    const mySong = document.getElementById('song');
+    const mySong = document.getElementById('song') as HTMLAudioElement ;
 
     boxFlower!.classList.toggle('active');
     boxFlower2!.classList.toggle('active');
@@ -58,7 +58,8 @@ export default function Happynewyear() {
     rhombus2!.classList.toggle('active');
     rhombusImg!.classList.toggle('active');
     mailActive!.classList.toggle('active');
-    mySong.play()
+    if(mySong.paused) mySong.play();
+
   };
 
   const slider3 = document.querySelector('.slider3');
@@ -291,7 +292,7 @@ export default function Happynewyear() {
         </div>
       </div>
 
-      <audio id="song" autoPlay>
+      <audio id="song">
         <source src={music} type="audio/mp3" />
       </audio>
     </div>
