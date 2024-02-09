@@ -6,7 +6,7 @@ import apricotBlossom from '@/assets/image/apricot-blossom.png';
 import lanterns from '@/assets/image/lanterns.png';
 import circularPattern from '@/assets/image/circular-pattern.png';
 import bg1 from '@/assets/image/bg1.jpg';
-import { Heart, MailIcon } from 'lucide-react';
+import { MailIcon } from 'lucide-react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 
 export default function Mail() {
