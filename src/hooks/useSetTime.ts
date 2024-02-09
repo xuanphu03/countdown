@@ -51,7 +51,7 @@ export function useSetTime() {
       secondsElement!.innerText = seconds < 10 ? `0${String(seconds)}` : String(seconds);
 
       if (D < 0) {
-        navigate('/');
+        navigate('/intro/happynewyear');
       }
     }, 1000);
 

@@ -22,7 +22,6 @@ import apricotBlossom from '@/assets/image/apricot-blossom.png';
 import bg1 from '@/assets/image/bg1.jpg';
 import music from '@/assets/image/nhac.mp3';
 import avt from '@/assets/image/avt.png';
-import './intro.css';
 
 export default function Happynewyear() {
   const buttonActive = () => {
