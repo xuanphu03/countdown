@@ -602,7 +602,7 @@
     transition: 0.5s;
 }
 .box-button .button button:hover ~ span i{
-    color: rgb(255, 41, 80);
+    color: #ff2950;
     transform: rotate(360deg);
     filter: drop-shadow(0px 0px 10px rgb(255, 187, 199));
 }
@@ -1442,7 +1442,7 @@
     position: absolute;
     z-index: 100000;
     margin-top: 330px;
-    width: 100px;
+    width: fit-content;
     height: 40px;
     display: flex;
     justify-content: center;
@@ -1454,42 +1454,33 @@
     padding: 10px 15px;
     background-color: rgb(199,37,68);
     border: none;
-    font-size: 25px;
-    border-radius: 4px 0px 0px 4px;
+    font-size: 16px;
     transition: 0.5s;
-    width: 58px;
     height: 40px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    border-radius: 0px 6px 6px 0px;
     color: #fff;
 }
 .mail button >i{
     transition: 0.5s;
 }
-.mail span{
+.mail p{
     position: relative;
-    width: 44px;
-    height: 44px;
     background-color: rgb(199,37,68);
-    margin-left: -2px;
-    border-radius: 0px 6px 6px 0px;
+    height: 40px;
+    color: #ffe100;
+    border-radius: 4px 0px 0px 4px;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     transition: 0.5s;
 }
-.heart i{
-    color: #fff;
-    transition: 1s;
-}
-.mail:hover button i{
-    cursor: pointer;
-    color: rgb(255, 41, 80);
-    filter: drop-shadow(0px 0px 10px rgb(255, 187, 199));
-    animation: rotateMail 0.5s linear infinite;
+
+.mail .box-mail:hover button {
+    transform: translateY(-4px);
+    background-color: rgb(186, 35, 62);
+    box-shadow: -2px 2px 5px rgb(0, 0, 0, 0.5);
 }
 @keyframes rotateMail{
     0%{
@@ -1508,18 +1499,6 @@
         transform: rotate(0deg);
     }
 }
-.mail:hover > .heart{
-    transform: translateY(-4px);
-    background-color: rgb(186, 35, 62);
-    box-shadow: -2px 2px 5px rgb(0, 0, 0, 0.5);
-}
-
-.mail:hover > .heart i{
-    color: rgb(255, 41, 80);
-    transform: rotate(360deg);
-    filter: drop-shadow(0px 0px 10px rgb(255, 187, 199));
-}
-
 .slider3{
     position: absolute;
     width: 100%;
@@ -1800,13 +1779,12 @@
     display: flex;
     justify-content: center;
     margin-top: 10px;
-    overflow: hidden;
 }
 .box-content .right .content .title h1{
     margin-top: -40px;
     transition: 0.5s;
 }
-.slider3:hover .title h1{
+.slider3 .title h1{
     animation: title 2s forwards;
 }
 @keyframes title{
@@ -1819,13 +1797,12 @@
 }
 .box-content .right .content p{
     padding: 30px 15px 0px 15px;
-    text-align: center;
     font-size: 18px;
     font-family: 'Dancing Script', cursive;
     opacity: 0;
     transition: 1s;
 }
-.slider3:hover .content p{
+.slider3 .content p{
     animation: bodyContent 2s 1s forwards;
 }
 @keyframes bodyContent{
@@ -1848,7 +1825,7 @@
     padding: 20px 0px 0px 20px;
     margin-top: -50px;
 }
-.slider3:hover .content h3{
+.slider3 .content h3{
     animation: fixedContent 2s 2s forwards;
 }
 @keyframes fixedContent{

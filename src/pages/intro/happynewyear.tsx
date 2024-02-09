@@ -1,9 +1,6 @@
 import bgr from '@/assets/image/bgr.jpg';
 import circularPattern from '@/assets/image/circular-pattern.png';
 import pattern from '@/assets/image/pattern.png';
-import bigFlower1 from '@/assets/image/big-flower.png';
-import bigFlower2 from '@/assets/image/big-flower1.png';
-import bigFlower3 from '@/assets/image/big-flower2.png';
 import dragon from '@/assets/image/dragon.png';
 import flower from '@/assets/image/flower.png';
 import flower1 from '@/assets/image/flower1.png';
@@ -18,10 +15,9 @@ import textureClouds from '@/assets/image/texture-clouds.png';
 import bigClouds1 from '@/assets/image/big-clouds1.png';
 import bigClouds2 from '@/assets/image/big-clouds2.png';
 import bigClouds3 from '@/assets/image/big-clouds3.png';
-import apricotBlossom from '@/assets/image/apricot-blossom.png';
-import bg1 from '@/assets/image/bg1.jpg';
 import music from '@/assets/image/nhac.mp3';
 import avt from '@/assets/image/avt.png';
+import Mail from './_components/mail';
 
 export default function Happynewyear() {
   const buttonActive = () => {
@@ -40,7 +36,7 @@ export default function Happynewyear() {
     const rhombus2 = document.querySelector('.rhombus:nth-child(2)');
     const rhombusImg = document.querySelector('.rhombus-img');
     const mailActive = document.querySelector('.mail');
-    const mySong = document.getElementById('song') as HTMLAudioElement ;
+    const mySong = document.getElementById('song') as HTMLAudioElement;
 
     boxFlower!.classList.toggle('active');
     boxFlower2!.classList.toggle('active');
@@ -57,18 +53,11 @@ export default function Happynewyear() {
     rhombus2!.classList.toggle('active');
     rhombusImg!.classList.toggle('active');
     mailActive!.classList.toggle('active');
-    if(mySong.paused) mySong.play();
-
+    if (mySong.paused) mySong.play();
   };
 
-  const slider3 = document.querySelector('.slider3');
-  const mail = () => {
-    slider3!.classList.add('active');
-  };
-
-  const closeMail = () => {
-    slider3!.classList.remove('active');
-  }
+  document.title = "Happy new year 2024"
+  
   return (
     <div className="relative w-full h-full">
       <div className="box-slider">
@@ -224,70 +213,9 @@ export default function Happynewyear() {
           <div className="rhombus"></div>
           <div className="rhombus"></div>
           <div className="rhombus-img">
-            {/* image avt */}
             <img src={avt} alt="" />
           </div>
-          <div className="mail" onClick={mail}>
-            <button>
-              <i className="fa-regular fa-envelope">Hihi</i>
-            </button>
-            <span className="heart">
-              <i className="fa-solid fa-heart"></i>
-            </span>
-          </div>
-        </div>
-        <div className="slider3">
-          <div className="box-content">
-            <div className="left">
-              <img src={bg1} alt="" />
-              <div className="center"></div>
-              <div className="lanterns-content">
-                <img src={lanterns} alt="" />
-              </div>
-              <div className="box-big_flowers">
-                <img src={bigFlower1} alt="" />
-                <img src={bigFlower1} alt="" />
-                <img src={bigFlower1} alt="" />
-                <img src={bigFlower2} alt="" />
-                <img src={bigFlower2} alt="" />
-                <img src={bigFlower3} alt="" />
-                <img src={bigFlower3} alt="" />
-                <img src={bigFlower3} alt="" />
-              </div>
-              <div className="box-circle_left">
-                <div className="circle_left">
-                  <img src={circularPattern} alt="" />
-                  <div className="text-content">
-                    <h2>Happy New</h2>
-                    <h1>Year</h1>
-                    <span>2024</span>
-                  </div>
-                </div>
-              </div>
-              <div className="apricot_blossom">
-                <img src={apricotBlossom} alt="" />
-                <img src={apricotBlossom} alt="" />
-                <img src={apricotBlossom} alt="" />
-                <img src={apricotBlossom} alt="" />
-                <img src={apricotBlossom} alt="" />
-                <img src={apricotBlossom} alt="" />
-              </div>
-            </div>
-            <div className="right">
-              <div className="content">
-                <div className="title">
-                  <h1>Tặng bạn Hặn iu dấu!!!</h1>
-                </div>
-                <p> const buttonSong = document.querySelec tor('.button');</p>
-                <div className="fixedContent">
-                  <h3>Người gửi: Dương Xuân Phú</h3>
-                </div>
-              </div>
-            </div>
-          </div>
-          <i onClick={closeMail} className="fa-solid fa-xmark font-bold">
-            X
-          </i>
+          <Mail />
         </div>
       </div>
 
