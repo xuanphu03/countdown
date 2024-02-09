@@ -5,7 +5,7 @@ export function useSetTime() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const timeNewYear: Date = new Date('2024-02-10 00:00:00');
+    const timeNewYear: Date = new Date('2024-02-09 10:25:00');
     const dayDot: HTMLElement = document.querySelector('.dayDot') as HTMLElement;
     const hourDot: HTMLElement = document.querySelector('.hourDot') as HTMLElement;
     const minuteDot: HTMLElement = document.querySelector('.minuteDot') as HTMLElement;
