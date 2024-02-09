@@ -20,8 +20,8 @@ export default function Mail() {
           </button>
         </div>
       </DialogTrigger>
-      <DialogContent className="slider3 z-[400] bg-transparent h-fit border-none hidden md:grid">
-        <div className="box-content md:w-[800px]">
+      <DialogContent className="slider3 z-[400] bg-transparent h-fit border-none">
+        <div className="box-content md:w-[800px] hidden md:flex">
           <div className="left">
             <img src={bg1} alt="" />
             <div className="center"></div>
@@ -99,9 +99,8 @@ export default function Mail() {
             </div>
           </div>
         </div>
-      </DialogContent>
-      <DialogContent className="slider3 z-[400] bg-transparent h-fit border-none md:hidden">
-        <div className="w-screen bg-[#c71435] p-5">
+
+        <div className="w-screen bg-[#c71435] p-5 md:hidden">
           <div className="contentMobile bg-[#ffd88a] p-5 ">
             <div className="title mb-3">
               <h1>Tặng bạn Hặn iu dấu!!!</h1>
