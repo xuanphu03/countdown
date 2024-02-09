@@ -62,9 +62,9 @@ export default function Happynewyear() {
     <div className="relative w-full h-full">
       <div className="box-slider">
         <div className="slider1">
-          <img src={bgr} alt="" />
+          <img className="h-screen" src={bgr} alt="" />
           <div className="happynewyear">
-            <div className="textHappynewyear">
+            <div className="textHappynewyear hidden md:flex">
               <div className="box-span">
                 <span></span>
               </div>
